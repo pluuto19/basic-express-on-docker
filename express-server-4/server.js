@@ -4,9 +4,9 @@ let counter = 1;
 
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
+app.get("/load", (req, res) => {
 	console.log(`Total Requests ${counter++}`);
-	res.status(200);
+	res.status(200).end();
 });
 app.get("/health", (req, res) => {
 	console.log("Health Checking");
